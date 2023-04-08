@@ -1,8 +1,65 @@
 <!DOCTYPE html>
 <html>
-	<head></head>
-	<body>
-		<div id="output"></div>
-		<script src="./index.bundle.js"></script>
-	</body>
+<head>
+	<style>
+		body{font-family:sans-serif; font-size:14px; color:#CCD; overflow-y:auto !important; padding:0px 10px;}
+		#output {
+			padding: 5px 10px;
+		}
+		.settingsbutton {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			background-image: url(settingscog.png);
+		}
+		.transbutton {
+			width: 12px;
+			height: 12px;
+			z-index: 11;
+			cursor: pointer;
+		}
+		.content {
+			border-bottom-left-radius:12px;
+			border-bottom-right-radius:12px;
+			margin:5px;
+		}
+		.disallow-rune {
+			filter: grayscale(100%);
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="https://runeapps.org/nis/nis.css">
+	<link rel="stylesheet" type="text/css" href="https://runeapps.org/nis/alt1-currentskin/skinstyle.css"/>
+	<link rel="stylesheet" type="text/css" href="https://runeapps.org/runeappslib.css"/>
+</head>
+<body class="nis">
+<div id="main-content" class="contentbox">
+	<div class="transbutton settingsbutton" onclick="viswax.showSettings();"></div>
+	<div id="unlockbutton" class="nisbutton" onclick="viswax.start();">Start</div>
+	<div class="nisseperator"></div>
+	<div id="output" class="nistext">Click the button when the Rune Goldberg Machine interface is open</div>
+</div>
+<div id="settings-content" class="contentbox" style="display:none">
+	<div class="nisbutton" onclick="viswax.saveSettings();">Confirm</div>
+	<div class="nisseperator"></div>
+	<div class="content">
+		<h2 class="nistext">Mode</h2>
+		<label>
+			<input id="radio-for-profit" name="calc-type" type="radio" onclick="viswax.changeMode(true)">
+			<span style="background-position:0px 0px;" class="skillimg"></span>
+			Profit
+		</label>
+		<label>
+			<input id="radio-for-vis" name="calc-type" type="radio" onclick="viswax.changeMode(false)">
+			<span style="background-position:0px -180px;" class="skillimg"></span>
+			Most Vis
+		</label>
+	</div>
+	<div class="nisseperator"></div>
+	<div class="content">
+		<h2 class="nistext">Allowed Runes</h2>
+		<div id="allowed-runes"></div>
+	</div>
+</div>
+<script src="./index.bundle.js"></script>
+</body>
 </html>

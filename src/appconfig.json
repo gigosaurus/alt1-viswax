@@ -1,16 +1,16 @@
 {
-	"appName": "example app",
-	"description": "minimal alt1 webpack/ts example test app",
+	"appName": "Vis Wax",
+	"description": "Guides you through selecting the optimal runes",
 	"appUrl": "./index.html",
 	"configUrl": "./appconfig.json",
-	"iconUrl": "",
-	"defaultWidth": 250,
-	"defaultHeight": 250,
-	"minWidth": 250,
-	"minHeight": 180,
-	"maxWidth": 1000,
-	"maxHeight": 1000,
+	"iconUrl": "./icon.png",
+	"defaultWidth": 258,
+	"defaultHeight": 258,
+	"minWidth": 258,
+	"minHeight": 50,
+	"maxWidth": 258,
+	"maxHeight": 100,
 	"requestHandlers": [ ],
 	"activators": [	],
-	"permissions": "pixel"
+	"permissions": "pixel,overlay"
 }

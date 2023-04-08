@@ -1,6 +1,10 @@
-# Minimal Alt1/webpack/typescript example
+# Vis wax
 
-how to use
+vix wax calculation taken from https://runescape.wiki/w/MediaWiki:Gadget-viscalc-core.js
+
+Current GE prices are retrieved from https://api.weirdgloop.org/
+
+## Usage
 ```sh
 #to initialize the repo and install dependencies
 npm i
@@ -10,6 +14,4 @@ npm run build
 npm run watch
 ```
 
-You can open `./dist/index.html` in your browser and it will give some basic functionality based one pasted images.
-
-You can also open it in the Alt1 browser and click the `add app` button that appears to get some basic alt1 functionality.
+But mostly this requires opening the app inside alt1 to gain the full capture and overlay benefits.
